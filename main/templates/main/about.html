@@ -1,17 +1,20 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
-
 {% block css %}
     <link rel="stylesheet" href="{% static 'deps/css/my_footer_css.css' %}">
 {% endblock %}
 
+{% block title %}
+	<title>{{ title }}</title>
+{% endblock %}
 
 {% block content %}
-	<div class="col-lg-10 ">
-                    <!-- Контент на странице -->
-                    <h1 class="mt-5 pt-5"><strong>{{ content }}</strong></h1>
-                </div>
+     <!-- Контент на странице -->
+	<div class="col-md-9 mt-5 pt-5 bg-white custom-shadow rounded">
+        <h2 class="m-2"><strong>{{ content_title }}</strong></h2>
+        <p class="m-2">{{ content }}</p>
+    </div>
 {% endblock %}
 
 {% block footer %}
